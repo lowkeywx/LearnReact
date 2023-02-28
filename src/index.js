@@ -7,16 +7,17 @@ class ContextTest extends React.Component {
     constructor(p) {
         super(p);
         this.state = {
-
+            v: "111"
         }
     }
 
     render() {        
-        return <ContextValue.Provider value="22222">
+        return <ContextValue.Provider value={this.state.v}>
         <div>
             <h1>如果不使用.Provider无法正常显示</h1>
             <h1>如果不设置value的值，context没有输出</h1>
             <ContextLevel1></ContextLevel1>
+            <button onClick={()=>this.setState({v:"2222"})}>change</button>
         </div>
         </ContextValue.Provider>
     }
