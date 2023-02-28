@@ -1,61 +1,45 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-const tempName = {
-    C: "C",
-    F: "F"
-}
 
-class TempInput extends React.Component {
+class Father extends React.Component {
     constructor(p) {
         super(p);
         this.state = {
-
+            v:p.v
         }
-    }
-    render() {
-        return <fieldset>
-            <legend>this is {this.props.typeName}</legend>
-            <input value={this.props.v} onChange={function(e){
-                e.target.typeName = this.props.typeName;
-                this.props.onChange(e);
-            }.bind(this)}></input>
-        </fieldset>
-    }
-}
-
-class TempSet extends React.Component {
-    constructor(p) {
-        super(p);
-        this.state = {
-            t: ""
-        }
-    }
-
-    convertCtoF(v) {
-        return (v * 9 / 5) + 32;
-    }
-
-    conveertFtoC(v) {
-        return (v - 32) * 5 / 9;
     }
 
     handleChange(e) {
-        let v = e.target.typeName === "F" ? this.conveertFtoC(e.target.value) : e.target.value;
-        this.setState({t: v});
+        this.props.onChange(e);
     }
 
     render() {
         return <div>
-            <label>"可以绑定不同的回调函数，来进行处理，就不用在e中添加变量了"</label>
-            <TempInput typeName={"F"} v={this.convertCtoF(this.state.t)} onChange={this.handleChange.bind(this)}></TempInput>
-            <TempInput typeName={"C"} v={this.state.t} onChange={this.handleChange.bind(this)}></TempInput>
+            <input value={this.props.v} onChange={this.handleChange.bind(this)}></input>
+        </div>
+    }
+}
+//constructor开始的时候调用一次，更改state，只调用render，props如何更新的呢？
+class RenderTest extends React.Component {
+    constructor(p) {
+        super(p);
+        this.state = {
+            v:p.v
+        }
+    }
+    handleChange(e) {
+        this.setState({v:e.target.value});
+    }
+    render() {
+        return <div>
+            <Father v={this.props.v} onChange={this.handleChange.bind(this)}></Father>
         </div>
     }
 }
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <TempSet></TempSet>
+    <RenderTest></RenderTest>
 );
 
