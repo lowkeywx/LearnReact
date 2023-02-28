@@ -47,6 +47,7 @@ class TempSet extends React.Component {
 
     render() {
         return <div>
+            <label>"可以绑定不同的回调函数，来进行处理，就不用在e中添加变量了"</label>
             <TempInput typeName={"F"} v={this.convertCtoF(this.state.t)} onChange={this.handleChange.bind(this)}></TempInput>
             <TempInput typeName={"C"} v={this.state.t} onChange={this.handleChange.bind(this)}></TempInput>
         </div>
