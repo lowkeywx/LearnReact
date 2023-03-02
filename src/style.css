@@ -14,8 +14,9 @@ li {
     list-style-type: none;
   }
   
-
-  li.special {
+  li.special,
+  span.special {
     color: orange;
-    font-weight: bold; 
+    font-weight: bold;
   }
+  
