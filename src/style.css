@@ -14,13 +14,20 @@ li {
     list-style-type: none;
   }
   
+  /*all element what className is special*/
   li.special,
   span.special {
     color: orange;
     font-weight: bold;
   }
   
+  /*child element who is em type*/
   li em {
     color: rebeccapurple;
+  }
+  
+  /*和h1同级的第一个P，后面的*/
+  h1 + p {
+    font-size: 200%;
   }
   
