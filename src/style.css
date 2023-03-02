@@ -15,9 +15,9 @@ li {
   }
 
   /*css使用专用化规则设置样式，类名币元素类型更具体，所以选择使用这个样式*/
-  /*某个值设置错误，则该属性被忽略*/
+  /*某个值设置错误，则该属性被忽略。属性名称设置错误也一样，不过一般都会有提示*/
   body h1 + p .special {
-    color: yellowww;
+    colorr: yellow;
     background-color: black;
     padding: 5px;
   }
