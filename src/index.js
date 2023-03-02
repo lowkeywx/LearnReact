@@ -8,8 +8,7 @@ import styel from "./style.css"
     <body>
     <p>这是标题前的第一个P元素</p>
     <h1>我是一级标题</h1>
-    <p>这是标题后的第一个P元素</p>
-    <p>这是一个段落文本。在文本中有一个 <span class="special">span element</span>
+    <p class="special">这是一个段落文本。在文本中有一个 <span class="special">span element</span>
 并且还有一个 <a href="http://example.com">链接</a>.</p>
 
     <p>这是第二段。包含了一个 <em>强调</em> 元素。</p>

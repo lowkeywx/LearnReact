@@ -1,19 +1,26 @@
 h1 {
     color: red;
-  }
+}
 
-  p {
-    color: green;
-  }
-
-  p, li {
+p, li {
     color: green;
 }
+/*上面的和这个设置样式重复了，但是谁在下面用谁的*/
+p {
+    color: rgb(79, 91, 182);
+  }
 /*没有了前面的小圆点， square会成为方块*/
 li {
     list-style-type: none;
   }
-  
+
+  /*和下面的样式重复了，但是会使用这个样式，不知道为什么*/
+  body h1 + p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+  }
+
   /*all element what className is special*/
   li.special,
   span.special {
@@ -31,3 +38,5 @@ li {
     font-size: 200%;
   }
   
+
+
