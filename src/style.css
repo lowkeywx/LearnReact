@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+  }
+
+  p {
+    color: green;
+  }
+
+  p, li {
+    color: green;
+}
+/*没有了前面的小圆点， square会成为方块*/
+li {
+    list-style-type: none;
+  }
+  
