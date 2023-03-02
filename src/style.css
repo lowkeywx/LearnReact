@@ -14,7 +14,7 @@ li {
     list-style-type: none;
   }
 
-  /*和下面的样式重复了，但是会使用这个样式，不知道为什么*/
+  /*css使用专用化规则设置样式，类名币元素类型更具体，所以选择使用这个样式*/
   body h1 + p .special {
     color: yellow;
     background-color: black;
