@@ -1,14 +1,43 @@
-/*所有body的子元素都会继承*/
-body {
+h1 {
     color: red;
 }
-/*类名为special的p及其子元素*/
-p.special {
+
+p,
+li {
     color: green;
 }
 
-/*元素P中className为special的子元素*/
-p .special {
-    color: green;
+/*上面的和这个设置样式重复了，但是谁在下面用谁的*/
+p {
+    color: rgb(79, 91, 182);
 }
 
+/*没有了前面的小圆点， square会成为方块*/
+li {
+    list-style-type: none;
+}
+
+/*css使用专用化规则设置样式，类名币元素类型更具体，所以选择使用这个样式*/
+/*某个值设置错误，则该属性被忽略。属性名称设置错误也一样，不过一般都会有提示*/
+body h1+p .special {
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+
+/*all element what className is special*/
+li.special,
+span.special {
+    color: orange;
+    font-weight: bold;
+}
+
+/*child element who is em type*/
+li em {
+    color: rebeccapurple;
+}
+
+/*和h1同级的第一个P，后面的*/
+h1+p {
+    font-size: 200%;
+}
