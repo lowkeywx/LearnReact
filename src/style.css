@@ -9,3 +9,7 @@
 .textColor {
     color: aqua;
 }
+/*插入的内容会应用已经设置的样式*/
+.content::after {
+    content: "123";
+}
