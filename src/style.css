@@ -1,7 +1,7 @@
 /*没有冲突的属性将被应用于每一个子元素*/
 body {
     color: rgb(88, 170, 107);
-    background-color: black;
+    background-color: rgb(238, 227, 227) !important;
     padding: 5px;
 }
 

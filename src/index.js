@@ -1,8 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import styel from "./style.css"
-
-
+import _ from "./style.css"
+//内联样式优先级最高
+let liStyle = {
+    'background-color': "red"
+}
   let root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <body>
@@ -16,7 +18,7 @@ import styel from "./style.css"
     <ul>
         <li>项目 1</li>
         <li class="special">项目 2</li>
-        <li>项目 <em>三</em></li>
+        <li style={liStyle}>项目 <em>三</em></li>
     </ul>
 
 </body>
