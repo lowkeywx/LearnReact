@@ -1,5 +1,4 @@
-/*这里全都变成了红色，是因为color的继承*/
-ul > li {
+/*所有兄弟元素li*/
+li ~ li {
     border-top: 5px solid red;
-    color:red;
 }  
