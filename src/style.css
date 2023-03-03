@@ -1,24 +1,4 @@
-/*在元素属性中设置class=“backendColor textColor”即可应用多种样式.
-* 应用多个样式的时候遵循css优先级，与属性中填写的先后顺序无关
-*/
-.backendColor {
-    color: red;
-    background-color: antiquewhite;
-}
-
-.textColor {
-    color: aqua;
-}
-/*插入的内容会应用已经设置的样式,宽和高需要携带单位，不然貌似没有效果. 
-content添加的内容会嵌入到display指定的形状中*/
-.content::after {
-    content: "123";
-    display: block;
-    width: 100px;
-    height: 100px;
-    background-color: blueviolet;
-}
-
-:any-link {
-    color: red;
+/*所有后代中是p且所有p的后代是span的元素*/
+body p span{
+    color: antiquewhite;
 }
