@@ -1,4 +1,5 @@
-/*所有后代中是p且所有p的后代是span的元素*/
-body p span{
-    color: antiquewhite;
-}
+/*这里全都变成了红色，是因为color的继承*/
+ul > li {
+    border-top: 5px solid red;
+    color:red;
+}  
