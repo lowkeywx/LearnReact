@@ -1,3 +1,10 @@
+/*没有冲突的属性将被应用于每一个子元素*/
+body {
+    color: rgb(88, 170, 107);
+    background-color: black;
+    padding: 5px;
+}
+
 h1 {
     color: red;
 }
