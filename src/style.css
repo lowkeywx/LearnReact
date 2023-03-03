@@ -4,7 +4,6 @@ body {
     background-color: rgb(238, 227, 227) !important;
     padding: 5px;
 }
-
 h1 {
     color: red;
 }
@@ -13,7 +12,10 @@ p,
 li {
     color: green;
 }
-
+/*第一个被作为自元素的P*/
+p:first-child {
+    color: aqua;
+}
 /*上面的和这个设置样式重复了，但是谁在下面用谁的*/
 p {
     color: rgb(79, 91, 182);
@@ -37,6 +39,10 @@ li.special,
 span.special {
     color: orange;
     font-weight: bold;
+}
+/*P中的第一个子元素， 优先级没有body h1+p .special高*/
+p *:first-child {
+    color: aqua;
 }
 
 /*child element who is em type*/
