@@ -14,7 +14,8 @@ let liStyle = {
 并且还有一个 <a href="http://example.com">链接</a>.</p>
 
     <p>这是第二段。包含了一个 <em>强调</em> 元素。</p>
-
+    <p href="http://example.com">被p包裹的连接</p>
+    <p><a href="http://example.com">另一个被p包裹的连接</a></p>
     <ul>
         <li>项目 1</li>
         <li class="special">项目 2</li>

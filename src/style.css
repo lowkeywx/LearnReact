@@ -18,3 +18,7 @@ content添加的内容会嵌入到display指定的形状中*/
     height: 100px;
     background-color: blueviolet;
 }
+
+:any-link {
+    color: red;
+}
