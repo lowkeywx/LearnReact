@@ -7,3 +7,8 @@ p.special {
     color: green;
 }
 
+/*元素P中className为special的子元素*/
+p .special {
+    color: green;
+}
+
