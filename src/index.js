@@ -7,9 +7,13 @@ let liStyle = {
 }
 let root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <body>
-        <p>
-            I am a paragraph and this is a <span>span</span> inside that paragraph. A span is an inline element and so does not respect width and height.
-        </p>
-    </body>
+    <div className="wrapper">
+        <div className="box a">
+            <p>aaaa</p>
+        </div>
+        <div className="box b">
+            <p>bbb</p>
+        </div>
+    </div>
+
 );

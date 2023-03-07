@@ -1,16 +1,22 @@
-/*内联盒子上下的margin不起作用，左右的可以。padding超过了上下元素的box的话会产生覆盖重叠.
-* inline-box 设置宽高会起作用，切pading和margin也可以
-*/
-span {
-    margin: 20px;
-    padding: 2px;
-    width: 50px;
-    height: 50px;
-    background-color: lightblue;
-    border: 2px solid blue;
-    display: inline-block;
-  }
-  div {
-    border: 2px solid rgb(0, 255, 47);
-  }
-  
+.box {
+    background-color: rgb(218, 190, 7);
+    border: 1px solid;
+    display: block;
+}
+.b {
+    background-color: rgb(16, 244, 16);
+    background-image: url(https://www1.plurib.us/1shot/2008/circle_design/circles_single.svg);
+    background-size:cover;
+    background-position: top center;
+    background-attachment:fixed;
+    transform: rotate(0.5turn);
+    word-break: break-all;
+    overflow-wrap:break-word;
+}
+.a {
+    background-color: aliceblue;
+}
+.wrapper {
+    border: 1px solid;
+}
+
